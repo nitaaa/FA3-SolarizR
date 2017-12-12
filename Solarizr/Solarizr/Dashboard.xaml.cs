@@ -39,11 +39,12 @@ namespace Solarizr
 
             StartTimers();
 
+            AppointmentData apptData = new AppointmentData();
+            Appointments = apptData.GetTodaysAppointments();
+
             getMapObjects();
 
             SmallMap.Loaded += Mapsample_Loaded;
-            AppointmentData apptData = new AppointmentData();
-            Appointments = apptData.GetTodaysAppointments();
             //foreach( appt a in list) create marker on calander
             //foreach(appt a in list) if a.date == today create marker on map
             //sitelist read from db - make list;
