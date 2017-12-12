@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Services.Maps;
 using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -26,15 +29,21 @@ namespace Solarizr
     public sealed partial class Dashboard : Page
     {
 
-       // List<ProjectSite> SiteList = new List<ProjectSite>();
+        // List<ProjectSite> SiteList = new List<ProjectSite>();
         //initialised below
+
+        ObservableCollection<Appointment> Appointments = new ObservableCollection<Appointment>();
         public Dashboard()
         {
             this.InitializeComponent();
 
             StartTimers();
 
+            getMapObjects();
+
             SmallMap.Loaded += Mapsample_Loaded;
+            AppointmentData apptData = new AppointmentData();
+            Appointments = apptData.GetTodaysAppointments();
             //foreach( appt a in list) create marker on calander
             //foreach(appt a in list) if a.date == today create marker on map
             //sitelist read from db - make list;
@@ -42,6 +51,51 @@ namespace Solarizr
             //initialize webview for weather - link from dian
             WebView_Weather.Navigate(new Uri("http://forecast.io/embed/#lat=42.3583&lon=-71.0603&name=the Job Site&color=#00aaff&font=Segoe UI&units=uk"));
 
+        }
+
+        private async void getMapObjects()
+        {
+            foreach (Appointment a in Appointments)
+            {
+                // The address or business to geocode.
+                string addressToGeocode = a.Address.ToString();
+
+                // The nearby location to use as a query hint.
+                BasicGeoposition queryHint = new BasicGeoposition();
+                queryHint.Latitude = -28;
+                queryHint.Longitude = 23;
+                Geopoint hintPoint = new Geopoint(queryHint);
+
+                // Geocode the specified address, using the specified reference point
+                // as a query hint. Return no more than 3 results.
+                MapLocationFinderResult result =
+                      await MapLocationFinder.FindLocationsAsync(addressToGeocode, hintPoint);
+
+                // If the query returns results, display the coordinates
+                // of the first result.
+                if (result.Status == MapLocationFinderStatus.Success)
+                {
+                    Debug.WriteLine( "result = (" +
+                          result.Locations[0].Point.Position.Latitude.ToString() + "," +
+                          result.Locations[0].Point.Position.Longitude.ToString() + ")");
+
+                    var center =
+                    new Geopoint(new BasicGeoposition()
+                    {
+                        Latitude = result.Locations[0].Point.Position.Latitude,
+                        Longitude = result.Locations[0].Point.Position.Longitude
+
+                    });
+                    await SmallMap.TrySetSceneAsync(MapScene.CreateFromLocationAndRadius(center, 3000));
+
+                    //Define MapIcon
+                    MapIcon myPOI = new MapIcon { Location = center, NormalizedAnchorPoint = new Point(0.5, 1.0), Title = a.Customer.Name, ZIndex = 0 };
+                    // add to map and center it
+                    SmallMap.MapElements.Add(myPOI);
+
+                }
+            }
+            
         }
 
         private DispatcherTimer t_DateTime;

@@ -29066,10 +29066,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\CTU\\Tongai\\FA3\\Solarizr\\Solarizr\\Solarizr.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\FA3-SolarizR\\Solarizr\\Solarizr\\Solarizr.csproj",
       "projectName": "Solarizr",
-      "projectPath": "C:\\Users\\User\\Documents\\CTU\\Tongai\\FA3\\Solarizr\\Solarizr\\Solarizr.csproj",
-      "outputPath": "C:\\Users\\User\\Documents\\CTU\\Tongai\\FA3\\Solarizr\\Solarizr\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\FA3-SolarizR\\Solarizr\\Solarizr\\Solarizr.csproj",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\FA3-SolarizR\\Solarizr\\Solarizr\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "uap10.0.10586"
@@ -29081,6 +29081,10 @@
       }
     },
     "dependencies": {
+      "Microsoft.Data.SQLite": {
+        "target": "Package",
+        "version": "1.1.1"
+      },
       "Microsoft.NETCore.UniversalWindowsPlatform": {
         "target": "Package",
         "version": "6.0.2"
@@ -29104,15 +29108,15 @@
       "System.Runtime.WindowsRuntime.UI.Xaml": {
         "target": "Package",
         "version": "4.3.0"
-      },
-      "Microsoft.Data.SQLite": {
-        "target": "Package",
-        "version": "[1.1.1, )"
       }
     },
     "frameworks": {
       "uap10.0.10586": {
         "dependencies": {
+          "Microsoft.Data.SQLite": {
+            "target": "Package",
+            "version": "1.1.1"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "6.0.2"

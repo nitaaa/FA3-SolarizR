@@ -22,7 +22,7 @@ namespace Solarizr
     /// </summary>
     public sealed partial class AppointmentManager : Page
     {
-        List<ProjectSite> SiteList = new List<ProjectSite>();
+        //List<ProjectSite> SiteList = new List<ProjectSite>();
         public AppointmentManager()
         {
             this.InitializeComponent();
@@ -57,7 +57,7 @@ namespace Solarizr
         private void BtnApptSave_Click(object sender, RoutedEventArgs e)
         {
             int cmbxItem = cmbxApptSitePicker.SelectedIndex;
-            ProjectSite pSite = SiteList[cmbxItem];
+            //ProjectSite pSite = SiteList[cmbxItem];
 
 
             DateTimeOffset _date = dateApptDatePicker.Date;
@@ -76,7 +76,7 @@ namespace Solarizr
             //dateApptDatePicker.Date = bindTime;
             #endregion
 
-            Appointment newAppointment = new Appointment(apptDateTime, pSite);
+           // Appointment newAppointment = new Appointment(apptDateTime, pSite);
         }
 
         private void AppBarHome_Click(object sender, RoutedEventArgs e)

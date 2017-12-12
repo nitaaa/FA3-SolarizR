@@ -35,7 +35,7 @@
                 <TextBlock x:ConnectionId='16' x:Name="txtCurrDate" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ddd, d MMM yy" VerticalAlignment="Top" FontSize="24" Margin="90,10,0,0"/>
             </Grid>
         </Grid>
-        <Grid x:ConnectionId='2' x:Name="GridMiniDash" Grid.Column="2" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280">
+        <Grid x:ConnectionId='2' x:Name="GridMiniDash" Grid.Column="2" BorderBrush="Aquamarine" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" BorderThickness="1">
             <Grid x:ConnectionId='12' x:Name="gridWeather" Margin="-214,89,0,287">
                 <WebView x:ConnectionId='14' x:Name="WV_Weather" HorizontalAlignment="Left" Height="241" Margin="114,9,0,0" VerticalAlignment="Top" Width="380"/>
                 <Rectangle Fill="White" HorizontalAlignment="Left" Height="256" Stroke="White" VerticalAlignment="Top" Width="214"/>
