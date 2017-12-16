@@ -18,7 +18,7 @@
             <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
         <Grid x:Name="AppBarGrid" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="1260" Grid.ColumnSpan="3">
-            <CommandBar ClosedDisplayMode="Compact" Margin="294,0,0,0">
+            <CommandBar ClosedDisplayMode="Compact" Background="#FFAEEC6D" Margin="294,0,0,0" Height="50">
                 <CommandBar.Content>
                     <Grid/>
                 </CommandBar.Content>
@@ -26,15 +26,15 @@
                 <AppBarButton Icon="People" Label="Project Sites" Click="AppBarProjSite_Click"/>
                 <AppBarButton Icon="Clock" Label="Appointment Manager" Click="AppBarAppointment_Click"/>
                 <AppBarButton Icon="World" Label="Map" Click="AppBarMap_Click"/>
-                <AppBarButton Icon="Save" Label="Save Site" Click="btnSave_Click" Background="#FFBBBBBB"/>
+                <AppBarButton Icon="Save" Label="Save Site" Click="btnSave_Click" Background="#FF83DA27"/>
             </CommandBar>
-            <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="320" Background="#FFE6E6E6">
+            <Grid HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="320" Background="#FFAEEC6D">
                 <TextBlock x:Name="txtCurrTime" HorizontalAlignment="Left" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" FontSize="24" Margin="10,10,0,0"/>
-                <TextBlock x:Name="txtCurrDate" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ddd, d MMM yy" VerticalAlignment="Top" FontSize="24" Margin="90,10,0,0"/>
+                <TextBlock x:Name="txtCurrDate" HorizontalAlignment="Right" TextWrapping="Wrap" Text="ddd, d MMM yy" VerticalAlignment="Top" FontSize="24" Margin="0,10,61,0"/>
             </Grid>
         </Grid>
-        <Grid x:Name="GridMiniDash" Grid.Column="2" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" BorderThickness="2" BorderBrush="Aquamarine"/>
-        <Grid x:Name="GridSites" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" BorderThickness="2" BorderBrush="Aquamarine">
+        <Grid x:Name="GridMiniDash" CornerRadius="15" Grid.Column="2" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" BorderThickness="2" BorderBrush="#FF89E824"/>
+        <Grid x:Name="GridSites" CornerRadius="15" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" BorderThickness="2" BorderBrush="#FF89E824">
             <ListView x:Name="ListV_Upcoming" Height="511" Margin="5,111,0,0" Width="265">
                 <ListView.ItemTemplate>
                     <DataTemplate >
@@ -62,24 +62,36 @@
             <TextBlock HorizontalAlignment="Left" Margin="15,57,0,0" TextWrapping="Wrap" Text="Filter by:" VerticalAlignment="Top" Width="80" FontSize="20"/>
         </Grid>
         <Grid x:Name="GridMain" Grid.Column="1" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="660">
-            <Grid x:Name="ApptCreateGrid" HorizontalAlignment="Left" Height="554" VerticalAlignment="Top" Width="640" Margin="10,63,0,0">
-                <Button x:Name="btnSave" HorizontalAlignment="Center" Margin="573,488,10,0" VerticalAlignment="Top" Height="56" Click="btnSave_Click" Width="57">
+            <Grid x:Name="ApptCreateGrid" HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="640" Margin="10,63,0,0">
+
+                <TextBox x:Name="txtSiteName" HorizontalAlignment="Left" Margin="247,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="" FontSize="18" FontFamily="Palatino Linotype"/>
+                <TextBox x:Name="txtSiteManager" HorizontalAlignment="Left" Margin="247,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="" FontSize="18" FontFamily="Palatino Linotype"/>
+                <TextBox x:Name="txtPhoneNumber" HorizontalAlignment="Left" Margin="247,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="" FontSize="18" FontFamily="Palatino Linotype"/>
+
+                <TextBlock HorizontalAlignment="Left" Margin="63,139,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="0.519,0.034" FontWeight="Bold" FontFamily="Palatino Linotype"/>
+                <TextBox x:Name="txtStreet" HorizontalAlignment="Left" Margin="247,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="" FontSize="18" FontFamily="Palatino Linotype"/>
+                <TextBox x:Name="txtSuburb" HorizontalAlignment="Left" Margin="247,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="" FontSize="18" FontFamily="Palatino Linotype"/>
+                <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="247,255,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="" FontSize="18" FontFamily="Palatino Linotype"/>
+                <TextBox x:Name="txtPostalCode" HorizontalAlignment="Left" Margin="247,296,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="" FontSize="18" FontFamily="Palatino Linotype"/>
+                <TextBox x:Name="txtCountry" HorizontalAlignment="Left" Margin="247,337,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="" FontSize="18" FontFamily="Palatino Linotype"/>
+                <CheckBox x:Name="chbxAddAppointment" Content="Add Appointment" HorizontalAlignment="Left" Margin="63,389,0,0" VerticalAlignment="Top" FontSize="20" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
+                <DatePicker x:Name="dateApptDatePicker" HorizontalAlignment="Left" Margin="247,426,0,0" VerticalAlignment="Top" Width="338" FontSize="18" FontFamily="Palatino Linotype"/>
+                <TimePicker x:Name="timeApptTimePicker" HorizontalAlignment="Left" Margin="247,467,0,0" VerticalAlignment="Top" Width="338" FontSize="18" FontFamily="Palatino Linotype"/>
+                <Button x:Name="btnSave" HorizontalAlignment="Center" Margin="582,508,10,0" VerticalAlignment="Top" Height="51" Click="btnSave_Click" Width="48">
                     <Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="Assets/Save1.jpg"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="Assets/Icons/Save.png"/>
                     </Button.Background>
                 </Button>
-                <TextBox x:Name="txtSiteName" HorizontalAlignment="Left" Margin="159,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="Project Site Name" FontSize="18"/>
-                <TextBlock HorizontalAlignment="Left" Margin="159,141,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontWeight="Bold"/>
-                <CheckBox x:Name="chbxAddAppointment" Content="Add Appointment" HorizontalAlignment="Left" Margin="159,386,0,0" VerticalAlignment="Top" FontSize="20" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
-                <TimePicker x:Name="timeApptTimePicker" HorizontalAlignment="Left" Margin="159,467,0,0" VerticalAlignment="Top" Width="338" FontSize="18"/>
-                <DatePicker x:Name="dateApptDatePicker" HorizontalAlignment="Left" Margin="159,426,0,0" VerticalAlignment="Top" Width="338" FontSize="18"/>
-                <TextBox x:Name="txtSiteManager" HorizontalAlignment="Left" Margin="159,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="Site Manager" FontSize="18"/>
-                <TextBox x:Name="txtPhoneNumber" HorizontalAlignment="Left" Margin="159,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="Telephone Number" FontSize="18"/>
-                <TextBox x:Name="txtStreet" HorizontalAlignment="Left" Margin="159,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="Street Address" FontSize="18"/>
-                <TextBox x:Name="txtSuburb" HorizontalAlignment="Left" Margin="159,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="Suburb" FontSize="18"/>
-                <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="159,255,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="City" FontSize="18"/>
-                <TextBox x:Name="txtPostalCode" HorizontalAlignment="Left" Margin="159,296,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="Postal Code" FontSize="18"/>
-                <TextBox x:Name="txtCountry" HorizontalAlignment="Left" Margin="159,337,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" PlaceholderText="Country" FontSize="18"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,176,0,0" TextWrapping="Wrap" Text="Street Address" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,217,0,0" TextWrapping="Wrap" Text="Suburb" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,258,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,299,0,0" TextWrapping="Wrap" Text="Postal Code" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,340,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,13,0,0" TextWrapping="Wrap" Text="Customer Name" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,95,0,0" TextWrapping="Wrap" Text="Site Manager" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,60,0,0" TextWrapping="Wrap" Text="Telephone Number" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,426,0,0" TextWrapping="Wrap" Text="Date" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,467,0,0" TextWrapping="Wrap" Text="Time" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
             </Grid>
             <TextBlock HorizontalAlignment="Left" Margin="182,10,0,0" TextWrapping="Wrap" Text="New Project Site" VerticalAlignment="Top" Width="320" Height="53" FontSize="36" TextAlignment="Center"/>
         </Grid>
