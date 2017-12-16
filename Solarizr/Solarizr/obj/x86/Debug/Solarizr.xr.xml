@@ -72,8 +72,8 @@
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Inlines" />
-      <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="HorizontalAlignment" />
@@ -118,6 +118,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="BorderBrush" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="Items" />
       <RootProperty Name="FontSize" />
     </RootType>
@@ -127,6 +128,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="ClockIdentifier" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
@@ -134,6 +136,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
@@ -202,6 +205,14 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="SelectedBorderBrush" />
+      <RootProperty Name="SelectedPressedBorderBrush" />
+      <RootProperty Name="SelectedHoverBorderBrush" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
+      <RootProperty Name="Color" />
+      <RootProperty Name="Opacity" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
       <RootProperty Name="Content" />
@@ -210,6 +221,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="VerticalContentAlignment" />
     </RootType>
@@ -228,6 +240,7 @@
       <RootProperty Name="IsReadOnly" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="BorderBrush" />
+      <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.Carousel">
       <RootProperty Name="HorizontalAlignment" />
