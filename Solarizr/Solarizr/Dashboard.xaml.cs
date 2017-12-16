@@ -1,46 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Services.Maps;
-using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Maps;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Solarizr
 {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
-	public sealed partial class Dashboard : Page
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class Dashboard : Page
 	{   
         //appointments - lists and data context
-		AppointmentData apptData = new AppointmentData();
+		AppointmentData appointmentData = new AppointmentData();
 		ObservableCollection<Appointment> todaysAppointments;
         ObservableCollection<Appointment> allAppointments;
         ObservableCollection<Appointment> upcomingAppointments = new ObservableCollection<Appointment>();
 
         //counters for todays appointments
-        double numAppointments = 0;
-        double numComplete = 0;
-        double numRemaining = 0;
+        double nrAppts = 0;
+        double nrComplete = 0;
+        double nrRemaining = 0;
 
         //Project Sites - lists and data context
-        ProjectSiteData psData = new ProjectSiteData();
+        ProjectSiteData projectSiteData = new ProjectSiteData();
         ObservableCollection<User> projectSites;
 
  
@@ -53,13 +43,14 @@ namespace Solarizr
 			this.InitializeComponent();
             txt_Percent.Text = "---%";
 
-			todaysAppointments = apptData.GetTodaysAppointments();
-            projectSites = psData.GetAllSites();
+			todaysAppointments = appointmentData.GetTodaysAppointments();
+            projectSites = projectSiteData.GetAllSites();
 
-            //foreach(appt a in list) if a.date == today create marker on map
             
-
+            
+            //load map and weather, add points of interest to map.
 			SmallMap.Loaded += Mapsample_Loaded;
+            //foreach(appt a in list) if a.date == today create marker on map
             getMapObjects();
 
             //foreach(appointment for today) if status == pending then add to upcomingAppointments.
@@ -89,9 +80,9 @@ namespace Solarizr
             InitializeForm();
             
             //add data to progress bar
-            numAppointments = todaysAppointments.Count;
-            numRemaining = upcomingAppointments.Count;
-            numComplete = numAppointments - numRemaining;
+            nrAppts = todaysAppointments.Count;
+            nrRemaining = upcomingAppointments.Count;
+            nrComplete = nrAppts - nrRemaining;
 
             //initial setting of progress bar
             SetProgressBar();
@@ -110,37 +101,31 @@ namespace Solarizr
             }
 
             //foreach( appt a in list) create marker on calander
-            allAppointments = apptData.GetAllAppointments();
-            //foreach (Appointment a in allAppointments)
-            //{
-                
-
-            //}
+            allAppointments = appointmentData.GetAllAppointments();
             
-            //initialize webview for weather - link from dian
           
 
 		}
 
         private void InitializeForm()
         {
-            Appointment curr = upcomingAppointments[0];
-            NextAppt_txtblock.Text = curr.Customer.Name + ", at " + curr.Date.Hour + ":" + curr.Date.Minute;
-            txtCust.Text = curr.Customer.Name;
-            txtPhone.Text = curr.Customer.Phone;
-            txtManager.Text = curr.SiteManager.Name;
+            Appointment currentAppt = upcomingAppointments[0];
+            NextAppt_txtblock.Text = currentAppt.Customer.Name + ", at " + currentAppt.Date.Hour + ":" + currentAppt.Date.Minute;
+            txtCustomer.Text = currentAppt.Customer.Name;
+            txtPhoneNr.Text = currentAppt.Customer.Phone;
+            txtSiteManager.Text = currentAppt.SiteManager.Name;
 
         }
 
         private void SetProgressBar()
         {
-            txt_Remaining.Text = "Appointments Left: " + numRemaining;
+            txt_Remaining.Text = "Appointments Left: " + nrRemaining;
 
-            if (numAppointments > 0)
+            if (nrAppts > 0)
             {
-                PB_Appointments.Value = numComplete;
-                PB_Appointments.Maximum = numAppointments;
-                txt_Percent.Text = (Math.Round(numComplete / numAppointments * 100)).ToString() + "%";
+                PB_Appointments.Value = nrComplete;
+                PB_Appointments.Maximum = nrAppts;
+                txt_Percent.Text = (Math.Round(nrComplete / nrAppts * 100)).ToString() + "%";
             }
         }
 
@@ -266,7 +251,7 @@ namespace Solarizr
 			 geoLocator = new Geolocator();
 			geoLocator.DesiredAccuracy = PositionAccuracy.High;
 			Geoposition pos = await geoLocator.GetGeopositionAsync();
-			WebView_Weather.Navigate(new Uri("http://forecast.io/embed/#lat=" + pos.Coordinate.Point.Position.Latitude.ToString() +"&lon="+pos.Coordinate.Point.Position.Longitude.ToString()+"&name=the Job Site&color=#00aaff&font=Segoe UI&units=ca"));
+			WebView_Weather.Navigate(new Uri("http://forecast.io/embed/#lat=" + pos.Coordinate.Point.Position.Latitude.ToString() +"&lon="+pos.Coordinate.Point.Position.Longitude.ToString()+ "&name=your location&color=#5fa812&font=Segoe UI&units=ca"));
 
 			var center =
 				new Geopoint(new BasicGeoposition()

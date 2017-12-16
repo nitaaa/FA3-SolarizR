@@ -6,5 +6,13 @@
   </PropertyGroup>
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>
+    <Source>C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\Assets\Logo\solar-panel.png</Source>
+    <SmallTileSource>C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\Assets\Logo\solar-panel.png</SmallTileSource>
+    <MediumTileSource>C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\Assets\Logo\solar-panel.png</MediumTileSource>
+    <WideTileSource>C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\Assets\Logo\solar-panel.png</WideTileSource>
+    <LargeTileSource>C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\Assets\Logo\solar-panel.png</LargeTileSource>
+    <AppIconSource>C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\Assets\Logo\solar-panel.png</AppIconSource>
+    <SplashScreenSource>C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\Assets\Logo\solar-panel.png</SplashScreenSource>
+    <BadgeLogoSource>C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\Assets\Logo\solar-panel.png</BadgeLogoSource>
   </PropertyGroup>
 </Project>

@@ -28957,10 +28957,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Solarizr\\Solarizr\\Solarizr.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\FA3-SolarizR\\Solarizr\\Solarizr\\Solarizr.csproj",
       "projectName": "Solarizr",
-      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Solarizr\\Solarizr\\Solarizr.csproj",
-      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Solarizr\\Solarizr\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\FA3-SolarizR\\Solarizr\\Solarizr\\Solarizr.csproj",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\FA3-SolarizR\\Solarizr\\Solarizr\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "uap10.0.10586"

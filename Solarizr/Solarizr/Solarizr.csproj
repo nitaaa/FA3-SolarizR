@@ -18,7 +18,7 @@
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <PackageCertificateKeyFile>Solarizr_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>EAFDCCD6598CD261C668DCAC8B4C3CDE4ECF8B51</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>C96D8908BE7E36DA5AFEDAF398F851F3CD94B793</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -127,66 +127,61 @@
     <None Include="Solarizr_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\BadgeLogo.scale-100.png" />
-    <Content Include="Assets\BadgeLogo.scale-125.png" />
-    <Content Include="Assets\BadgeLogo.scale-150.png" />
-    <Content Include="Assets\BadgeLogo.scale-200.png" />
-    <Content Include="Assets\BadgeLogo.scale-400.png" />
     <Content Include="Assets\Icons\alarm.png" />
     <Content Include="Assets\Icons\attachment.png" />
+    <Content Include="Assets\Icons\file.png" />
     <Content Include="Assets\Icons\full-screen.png" />
     <Content Include="Assets\Icons\photo-camera.png" />
     <Content Include="Assets\Icons\save.png" />
     <Content Include="Assets\Icons\send.png" />
-    <Content Include="Assets\LargeTile.scale-100.png" />
-    <Content Include="Assets\LargeTile.scale-125.png" />
-    <Content Include="Assets\LargeTile.scale-150.png" />
-    <Content Include="Assets\LargeTile.scale-200.png" />
-    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\Logo\solar-panel.png" />
     <Content Include="Assets\Save1.jpg" />
-    <Content Include="Assets\SmallTile.scale-100.png" />
-    <Content Include="Assets\SmallTile.scale-125.png" />
-    <Content Include="Assets\SmallTile.scale-150.png" />
-    <Content Include="Assets\SmallTile.scale-200.png" />
-    <Content Include="Assets\SmallTile.scale-400.png" />
-    <Content Include="Assets\solar-panel.png" />
-    <Content Include="Assets\SplashScreen.scale-100.png" />
-    <Content Include="Assets\SplashScreen.scale-125.png" />
-    <Content Include="Assets\SplashScreen.scale-150.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-400.png" />
-    <Content Include="Assets\Square150x150Logo.scale-100.png" />
-    <Content Include="Assets\Square150x150Logo.scale-125.png" />
-    <Content Include="Assets\Square150x150Logo.scale-150.png" />
-    <Content Include="Assets\Square150x150Logo.scale-400.png" />
-    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
-    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
-    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
-    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
-    <Content Include="Assets\Square44x44Logo.scale-100.png" />
-    <Content Include="Assets\Square44x44Logo.scale-125.png" />
-    <Content Include="Assets\Square44x44Logo.scale-150.png" />
-    <Content Include="Assets\Square44x44Logo.scale-400.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
-    <Content Include="Assets\StoreLogo.scale-100.png" />
-    <Content Include="Assets\StoreLogo.scale-125.png" />
-    <Content Include="Assets\StoreLogo.scale-150.png" />
-    <Content Include="Assets\StoreLogo.scale-200.png" />
-    <Content Include="Assets\StoreLogo.scale-400.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\Visual Assets\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\Visual Assets\BadgeLogo.scale-125.png" />
+    <Content Include="Assets\Visual Assets\BadgeLogo.scale-150.png" />
+    <Content Include="Assets\Visual Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\Visual Assets\BadgeLogo.scale-400.png" />
+    <Content Include="Assets\Visual Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\Visual Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\Visual Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\Visual Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\Visual Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\Visual Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\Visual Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\Visual Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\Visual Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\Visual Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\Visual Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Visual Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\Visual Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\Visual Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Visual Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Visual Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Visual Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Visual Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Visual Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Visual Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Visual Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\Visual Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Visual Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Visual Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Visual Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Visual Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -234,6 +229,7 @@
       <Version>4.3.0</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

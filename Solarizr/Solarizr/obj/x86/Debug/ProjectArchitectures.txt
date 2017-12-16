@@ -1,1 +1,1 @@
-C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Solarizr.csproj;x86
+C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\Solarizr.csproj;x86

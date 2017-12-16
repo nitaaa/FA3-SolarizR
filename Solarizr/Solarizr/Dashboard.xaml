@@ -7,9 +7,9 @@
     xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     xmlns:controls ="using:Microsoft.Toolkit.Uwp.UI.Controls"
     x:Class="Solarizr.Dashboard"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="730.667" Width="1278.667">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FFE0F7C8">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="426"/>
             <ColumnDefinition Width="426"/>
@@ -19,34 +19,38 @@
             <RowDefinition Height="48"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid x:Name="ApptForm" BorderBrush="Aquamarine" BorderThickness="1" HorizontalAlignment="Left" Height="632" Margin="8,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="408">
-            <TextBlock HorizontalAlignment="Left" Margin="13,10,0,0" TextWrapping="Wrap" Text="Next Appointment:" VerticalAlignment="Top" Width="390" FontSize="20" Height="29"/>
-            <TextBox x:Name="NextAppt_txtblock" HorizontalAlignment="Left" Margin="6,46,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="36" Width="390" FontSize="16" IsReadOnly="True" PlaceholderText="" BorderBrush="#66747474"/>
-            <ComboBox x:Name="cmbx_Status" HorizontalAlignment="Left" Margin="154,87,0,0" VerticalAlignment="Top" Width="242" FontSize="16" BorderBrush="#66747474"/>
-            <TextBlock HorizontalAlignment="Left" Margin="14,93,0,0" TextWrapping="Wrap" Text="Status:" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.79,-0.063"/>
-            <StackPanel  Name="SiteInfo_LV"  HorizontalAlignment="Left" Height="69" Margin="6,127,0,0" VerticalAlignment="Top" Width="390" BorderBrush="MediumAquamarine" BorderThickness="1">
-                <TextBlock x:Name="txtCust" Text="Customer: " FontSize="16"></TextBlock>
-                <TextBlock x:Name="txtPhone" Text="Phone: " FontSize="16"></TextBlock>
-                <TextBlock x:Name="txtManager" Text="Site Manager: " FontSize="16"></TextBlock>
+        <Grid x:Name="ApptForm"  CornerRadius="15" Background="White" BorderBrush="#FF89E824" BorderThickness="1" HorizontalAlignment="Left" Height="377" Margin="8,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="834" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="206*"/>
+                <ColumnDefinition Width="211*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="14,11,0,0" TextWrapping="Wrap" Text="Next Appointment:" VerticalAlignment="Top" Width="390" FontSize="20" Height="29"/>
+            <TextBox x:Name="NextAppt_txtblock" HorizontalAlignment="Left" Margin="222,12,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="36" Width="605" FontSize="16" IsReadOnly="True" PlaceholderText="" BorderBrush="#66747474" Grid.ColumnSpan="2"/>
+            <ComboBox x:Name="cmbx_Status" HorizontalAlignment="Left" Margin="159,53,0,0" VerticalAlignment="Top" Width="242" FontSize="16" BorderBrush="#66747474"/>
+            <TextBlock HorizontalAlignment="Left" Margin="16,59,0,0" TextWrapping="Wrap" Text="Status:" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.79,-0.063"/>
+            <StackPanel  Name="SiteInfo_SP"  HorizontalAlignment="Left" Height="69" Margin="12,102,0,0" VerticalAlignment="Top" Width="390" BorderBrush="#FF89E824" BorderThickness="1">
+                <TextBlock x:Name="txtCustomer" Text="Customer: " FontSize="16"></TextBlock>
+                <TextBlock x:Name="txtPhoneNr" Text="Phone: " FontSize="16"></TextBlock>
+                <TextBlock x:Name="txtSiteManager" Text="Site Manager: " FontSize="16"></TextBlock>
             </StackPanel>
-            <TextBox x:Name="txt_Comments" HorizontalAlignment="Left" Margin="6,229,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="135" Width="390" FontSize="20" BorderBrush="#66747474"/>
-            <TextBlock HorizontalAlignment="Left" Margin="14,202,0,0" TextWrapping="Wrap" Text="Notes and Comments:" VerticalAlignment="Top" FontSize="16"/>
-            <Button x:Name="BtnReportSave" HorizontalAlignment="Center" Margin="296,577,72,0" VerticalAlignment="Top" Height="40" Width="40">
+            <TextBox x:Name="txt_Comments" HorizontalAlignment="Left" Margin="11,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="154" Width="390" FontSize="16" BorderBrush="#66747474"/>
+            <TextBlock HorizontalAlignment="Left" Margin="17,177,0,0" TextWrapping="Wrap" Text="Notes and Comments:" VerticalAlignment="Top" FontSize="16"/>
+            <Button x:Name="BtnReportSave" HorizontalAlignment="Center" Margin="372,311,9,0" VerticalAlignment="Top" Height="40" Width="40" Grid.Column="1">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/Icons/save.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="352,576,0,0" VerticalAlignment="Top" Height="46" Width="46">
+            <Button Content="" HorizontalAlignment="Left" Margin="308,312,0,0" VerticalAlignment="Top" Height="46" Width="46" Grid.Column="1">
                 <Button.Background>
                     <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/send.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="232,577,0,0" VerticalAlignment="Top" Height="40" Width="40">
+            <Button Content="" HorizontalAlignment="Left" Margin="234,317,0,0" VerticalAlignment="Top" Height="40" Width="40" Grid.Column="1">
                 <Button.Background>
                     <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/full-screen.png"/>
                 </Button.Background>
             </Button>
-            <controls:Carousel x:Name="imgCarousel" HorizontalAlignment="Left" Height="175" Margin="11,387,0,0" VerticalAlignment="Top" Width="385" AllowDrop="True">
+            <controls:Carousel x:Name="imgCarousel" HorizontalAlignment="Left" Height="200" Margin="7,100,0,0" VerticalAlignment="Top" Width="409" AllowDrop="True" BorderBrush="#FFC7C7C7" BorderThickness="2" Grid.Column="1">
                 <controls:Carousel.EasingFunction>
                     <CubicEase EasingMode="EaseOut" />
                 </controls:Carousel.EasingFunction>
@@ -60,22 +64,21 @@
                     </DataTemplate>
                 </controls:Carousel.ItemTemplate>
             </controls:Carousel>
-            <Button x:Name="btnAddImage" Content="" HorizontalAlignment="Left" Margin="7,578,0,0" VerticalAlignment="Top" Height="40" Width="40">
+            <Button x:Name="btnAddImage" Content="" HorizontalAlignment="Left" Margin="313,54,0,0" VerticalAlignment="Top" Height="40" Width="40" Grid.Column="1">
                 <Button.Background>
                     <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/attachment.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnTakePic" Content="" HorizontalAlignment="Left" Margin="53,582,0,0" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.675,0.4">
+            <Button x:Name="btnTakePic" Content="" HorizontalAlignment="Left" Margin="371,55,0,0" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.675,0.4" Grid.Column="1">
                 <Button.Background>
                     <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/photo-camera.png"/>
                 </Button.Background>
             </Button>
         </Grid>
-        <Grid x:Name="DashPanel" BorderBrush="Aquamarine" BorderThickness="1" HorizontalAlignment="Left" Height="333" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="834" Grid.Column="1" Grid.ColumnSpan="2">
+        <Grid x:Name="DashPanel" CornerRadius="15" Background="WhiteSmoke" BorderBrush="#FF89E824" BorderThickness="1" HorizontalAlignment="Left" Height="263" Margin="8,410,0,0" Grid.Row="1" VerticalAlignment="Top" Width="834" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="165"/>
-                <RowDefinition Height="81"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="270"/>
@@ -85,7 +88,7 @@
 
             <WebView x:Name="WebView_Weather" HorizontalAlignment="Left" Height="217" VerticalAlignment="Top" Width="821" Grid.ColumnSpan="3" Margin="3,38,-14,0" Grid.RowSpan="3"/>
 
-            <Rectangle Fill="White" HorizontalAlignment="Left" Height="77" Stroke="White" StrokeThickness="4" VerticalAlignment="Top" Width="830" Grid.ColumnSpan="3" Margin="2,4,-22,0" Grid.RowSpan="2"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="77" VerticalAlignment="Top" Width="830" Grid.ColumnSpan="3" Margin="2,4,-22,0" Grid.RowSpan="2"/>
 
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="15,1,4,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="251" Height="28" TextAlignment="Center">
                 <Run Text=" Next Appointment:"/>
@@ -103,16 +106,7 @@
                 <ComboBoxItem Content="60"/>
             </ComboBox>
             <TextBlock HorizontalAlignment="Left" Margin="76,43,0,0" TextWrapping="Wrap" Text="Minutes" VerticalAlignment="Top" Height="24" Width="100" FontSize="20"/>
-            <Grid HorizontalAlignment="Left" BorderThickness="0" BorderBrush="Aquamarine" Height="76" Grid.Row="2" VerticalAlignment="Top" Width="833" Grid.ColumnSpan="3" Margin="0,5,-23,0">
-                <Button x:Name="BtnApptCreate" HorizontalAlignment="Center" Margin="713,10,10,0" VerticalAlignment="Top" Height="62" Click="BtnApptCreate_Click" Width="110">
-                    <TextBlock Text="Create Appointment" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" />
-                </Button>
-                <ComboBox x:Name="cmbxApptSitePicker" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="321" BorderBrush="#66747474"/>
-                <TimePicker x:Name="timeApptTimePicker" HorizontalAlignment="Left" Margin="376,40,0,0" VerticalAlignment="Top" Width="295" ClockIdentifier="24HourClock"/>
-                <DatePicker x:Name="dateApptDatePicker" HorizontalAlignment="Left" Margin="376,7,0,0" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,8,0,0" TextWrapping="Wrap" Text="New Appointment" VerticalAlignment="Top" Width="320" Height="30" FontSize="20" TextAlignment="Center"/>
-            </Grid>
-            <controls:RadialProgressBar x:Name="PB_Appointments" Grid.Column="2" HorizontalAlignment="Left" Height="70" Margin="10,5,0,0" VerticalAlignment="Top" Width="70" Thickness="4" Outline="LightGray" Foreground="Aquamarine" Minimum="0" Maximum="8" Value="5"/>
+            <controls:RadialProgressBar x:Name="PB_Appointments" Grid.Column="2" HorizontalAlignment="Left" Height="70" Margin="10,5,0,0" VerticalAlignment="Top" Width="70" Thickness="4" Outline="LightGray" Foreground="#FF89E824" Minimum="0" Maximum="8" Value="5"/>
             <TextBlock x:Name="txt_Remaining" Grid.Column="2" HorizontalAlignment="Left" Margin="90,28,-15,0" TextWrapping="Wrap" Text="Appointments Remaining: 3" VerticalAlignment="Top" Width="195" Height="23"/>
             <TextBlock x:Name="txt_Percent" Grid.Column="2" HorizontalAlignment="Left" Margin="31,31,0,0" TextWrapping="Wrap" Text="63%" VerticalAlignment="Top" Width="36" FontSize="12" RenderTransformOrigin="0.602,0.542" TextAlignment="Center"/>
             <Button HorizontalAlignment="Left" Margin="182,16,0,0" VerticalAlignment="Top" Width="38" Click="SetAlarm" Height="36">
@@ -122,10 +116,10 @@
             </Button>
         </Grid>
 
-        <Maps:MapControl x:Name="SmallMap" MapServiceToken="jD5kWxGj04JMc8cFcBhl~jWowhUGR8_6Yyh0PAJFKbw~AiqHwDVxeSIn2Ix2y7BMtaRrfh2Njv8ygrgXWMRsMrdYj0UpCRpOodyJpapJOywM" Grid.Column="2" HorizontalAlignment="Left" Margin="10,348,0,0" Grid.Row="1" VerticalAlignment="Top" Height="294" Width="408"/>
-        <CalendarView x:Name="ApptCalendar" Grid.Column="1" HorizontalAlignment="Left" Margin="10,348,0,0" Grid.Row="1" VerticalAlignment="Top" Width="406" Height="294"/>
+        <Maps:MapControl x:Name="SmallMap" MapServiceToken="jD5kWxGj04JMc8cFcBhl~jWowhUGR8_6Yyh0PAJFKbw~AiqHwDVxeSIn2Ix2y7BMtaRrfh2Njv8ygrgXWMRsMrdYj0UpCRpOodyJpapJOywM" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="212" Width="406"/>
+        <CalendarView x:Name="ApptCalendar" Grid.Column="2" HorizontalAlignment="Left" Margin="12,227,0,0" Grid.Row="1" VerticalAlignment="Top" Width="404" Height="286"/>
         <Grid Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="1280" Margin="0,0,-2,0" Grid.RowSpan="2">
-            <CommandBar Margin="415,0,0,0" Background="Gainsboro" Height="53">
+            <CommandBar Margin="415,0,0,0" Background="#FFAEEC6D" Height="53">
                 <CommandBar.Content>
                     <Grid/>
                 </CommandBar.Content>
@@ -134,10 +128,21 @@
                 <AppBarButton Icon="Clock" Label="Appointment Manager" Click="AppBarAppointment_Click"/>
                 <AppBarButton Icon="World" Label="Map" Click="AppBarMap_Click"/>
             </CommandBar>
-            <Grid HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="428" Background="Gainsboro">
+            <Grid HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="428" Background="#FFAEEC6D">
                 <TextBlock x:Name="txtCurrTime" HorizontalAlignment="Left" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" FontSize="24" Margin="10,10,0,0"/>
                 <TextBlock x:Name="txtCurrDate" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ddd, d MMM yy" VerticalAlignment="Top" FontSize="24" Margin="90,10,0,0"/>
             </Grid>
+        </Grid>
+        <Grid x:Name="Appt_Grid"  HorizontalAlignment="Left" BorderThickness="1" CornerRadius="15" BorderBrush="#FF89E824" Height="155" Grid.Row="1" VerticalAlignment="Top" Width="406" Margin="12,518,0,0" Grid.Column="2" Background="White">
+            <ComboBox x:Name="cmbxApptSitePicker" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="384" BorderBrush="#66747474"/>
+            <TimePicker x:Name="timeApptTimePicker" HorizontalAlignment="Left" Margin="12,114,0,0" VerticalAlignment="Top" Width="295" ClockIdentifier="24HourClock"/>
+            <DatePicker x:Name="dateApptDatePicker" HorizontalAlignment="Left" Margin="12,77,0,0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="12,5,0,0" TextWrapping="Wrap" Text="New Appointment" VerticalAlignment="Top" Width="383" Height="30" FontSize="20" TextAlignment="Center"/>
+            <Button x:Name="BtnApptCreate" HorizontalAlignment="Left" Margin="334,87,0,0" VerticalAlignment="Top" Click="BtnApptCreate_Click" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="59" Width="60">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/file.png"/>
+                </Button.Background>
+            </Button>
         </Grid>
 
     </Grid>
