@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -17,59 +20,73 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Solarizr
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class SiteManager : Page
-    {
-        public SiteManager()
-        {
-            this.InitializeComponent();
-            StartTimers();
-        }
+	/// <summary>
+	/// An empty page that can be used on its own or navigated to within a Frame.
+	/// </summary>
+	public sealed partial class SiteManager : Page
+	{
+		ObservableCollection<User> _out;
+		ProjectSiteData _ps = new ProjectSiteData();
+		public SiteManager()
+		{
+			this.InitializeComponent();
+			try
+			{
+				
+				_out = _ps.GetAllSites();
+				ListV_Upcoming.ItemsSource = _out;
 
-        private DispatcherTimer t_DateTime;
+			}
+			catch (Exception e)
+			{
+				Debug.WriteLine(e.Message);
+			}
 
-        public void StartTimers()
-        {
-            t_DateTime = new DispatcherTimer();
-            t_DateTime.Tick += UpdateDateTime;
-            t_DateTime.Interval = TimeSpan.FromSeconds(1);
-            t_DateTime.Start();
+		}
 
-        }
+		private void btnSave_Click(object sender, RoutedEventArgs e)
+		{
+		
+			string _name = txtSiteName.Text;
+			string _phone = txtPhoneNumber.Text;
 
-        public void UpdateDateTime(Object sender, Object e)
-        {
-            DateTime datetime = DateTime.Now;
+			string _Street = txtStreet.Text;
+			string _Suburb = txtSuburb.Text;
+			string _City = txtCity.Text;
+			string _PCode = txtPostalCode.Text;
+			string _Country = txtCountry.Text;
+			Address _address = new Address(_Street, _Suburb, _City, _PCode, _Country);
+			User _Site = new User(_name, _phone, _address);
+			bool _complete = _ps.InsertUser(_Site);
+			if (_complete)
+			{
+				Debug.WriteLine("User Saved");
+			}
+			else
+			{
+				Debug.WriteLine("Error with User Save");
+			}
+		}
 
-            txtCurrTime.Text = datetime.ToString("hh:mm");
-            txtCurrDate.Text = datetime.ToString("ddd, d MMM yy");
-        }
+		private void AppBarHome_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(Dashboard), e);
+		}
 
-        private void btnSave_Click(object sender, RoutedEventArgs e)
-        {
+		private void AppBarProjSite_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(SiteManager), e);
+		}
 
-        }
+		private void AppBarAppointment_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(AppointmentManager), e);
+		}
 
-        private void AppBarHome_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Dashboard), e);
-        }
+		private void AppBarMap_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MapView), e);
+		}
 
-        private void AppBarProjSite_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(SiteManager), e);
-        }
-
-        private void AppBarAppointment_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(AppointmentManager), e);
-        }
-
-        private void AppBarMap_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MapView), e);
-        }
-    }
+	}
 }

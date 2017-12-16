@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-J7J9UD4</Machine>
+    <Machine>QAANITA-LAPTOP</Machine>
     <WindowsUser>User</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -10,26 +10,29 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>36489335-8f90-4686-9785-adaf2a5e7f0c</PackageIdentityName>
     <PackageIdentityPublisher>CN=Qaanita Fataar</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\User\Documents\GitHub\Solarizr\Solarizr\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\User\Documents\GitHub\Solarizr\Solarizr\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\bin\x86\Debug\Solarizr.exe">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\bin\x86\Debug\Solarizr.exe">
       <PackagePath>entrypoint\Solarizr.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\Microsoft.CSharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\.nuget\packages\Microsoft.Data.Sqlite\1.1.1\lib\netstandard1.3\Microsoft.Data.Sqlite.dll">
+      <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\Microsoft.Identity.Client\1.0.304142221-alpha\lib\netcore45\Microsoft.Identity.Client.Platform.dll">
       <PackagePath>Microsoft.Identity.Client.Platform.dll</PackagePath>
@@ -184,7 +187,7 @@
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\runtime.win7.System.Private.Uri\4.3.0\runtimes\win\lib\netcore50\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\.nuget\packages\SQLite.Native\3.12.3\runtimes\win7-x86\native\sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\User\.nuget\packages\SQLite\3.13.0\runtimes\win10-x86\nativeassets\uap10.0\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\System.AppContext\4.3.0\lib\netcore50\System.AppContext.dll">
@@ -220,7 +223,7 @@
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\System.ComponentModel.TypeConverter\4.3.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll">
       <PackagePath>System.ComponentModel.TypeConverter.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\.nuget\packages\System.Data.Common\4.1.0\lib\netstandard1.2\System.Data.Common.dll">
+    <AppxPackagedFile Include="C:\Users\User\.nuget\packages\System.Data.Common\4.3.0\lib\netstandard1.2\System.Data.Common.dll">
       <PackagePath>System.Data.Common.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\System.Diagnostics.Contracts\4.3.0\lib\netcore50\System.Diagnostics.Contracts.dll">
@@ -430,192 +433,231 @@
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\Win2D.uwp\1.21.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Icons\alarm.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Icons\alarm.png">
       <PackagePath>Assets\Icons\alarm.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Icons\full-screen.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Icons\full-screen.png">
       <PackagePath>Assets\Icons\full-screen.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Icons\save.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Icons\save.png">
       <PackagePath>Assets\Icons\save.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Icons\send.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Icons\send.png">
       <PackagePath>Assets\Icons\send.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\LargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\LargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\solar-panel.png">
+      <PackagePath>Assets\solar-panel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square150x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square150x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Assets\Save1.jpg">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Assets\Save1.jpg">
       <PackagePath>Assets\Save1.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\bin\x86\Debug\Solarizr.xr.xml">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\bin\x86\Debug\Solarizr.xr.xml">
       <PackagePath>Solarizr.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
@@ -732,11 +774,11 @@
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\Microsoft.Toolkit.Uwp.UI.Controls\2.1.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\User\Documents\CTU\Tongai\FA3\Solarizr\Solarizr\bin\x86\Debug\Core\Solarizr.exe">
+    <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\Solarizr\Solarizr\bin\x86\Debug\Core\Solarizr.exe">
       <PackagePath>Solarizr.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

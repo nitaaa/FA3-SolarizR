@@ -61,7 +61,7 @@ namespace Solarizr
 			return null;
 		}
 
-		public ObservableCollection<User> GetAllUsers()
+		public ObservableCollection<User> GetAllSites()
 		{
 			ObservableCollection<User> _users = new ObservableCollection<User>();
 			using (SqliteConnection db = new SqliteConnection("Filename=Solarizr_db.db"))
@@ -131,7 +131,7 @@ namespace Solarizr
 
 					if (_adIndex == -1)
 					{
-						throw new SqliteException("Error", 500);
+						throw new SqliteException("You Done Fucked Up", 500);
 					}
 
 					//Use parameterized query to prevent SQL injection attacks

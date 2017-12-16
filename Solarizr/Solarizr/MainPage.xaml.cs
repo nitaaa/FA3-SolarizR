@@ -26,5 +26,57 @@ namespace Solarizr
         {
             this.InitializeComponent();
         }
-    }
+
+		//private void Add_Text(object sender, RoutedEventArgs e)
+		//{
+		//	using (SqliteConnection db = new SqliteConnection("Filename=sqliteSample.db"))
+		//	{
+		//		db.Open();
+
+		//		SqliteCommand insertCommand = new SqliteCommand();
+		//		insertCommand.Connection = db;
+
+		//		//Use parameterized query to prevent SQL injection attacks
+		//		insertCommand.CommandText = "INSERT INTO MyTable VALUES (NULL, @Entry);";
+		//		insertCommand.Parameters.AddWithValue("@Entry", Input_Box.Text);
+
+		//		try
+		//		{
+		//			insertCommand.ExecuteReader();
+		//		}
+		//		catch (SqliteException error)
+		//		{
+		//			//Handle errord
+		//			return;
+		//		}
+		//		db.Close();
+		//	}
+		//	Output.ItemsSource = Grab_Entries();
+		//}
+		//private List<String> Grab_Entries()
+		//{
+		//	List<String> entries = new List<string>();
+		//	using (SqliteConnection db = new SqliteConnection("Filename=sqliteSample.db"))
+		//	{
+		//		db.Open();
+		//		SqliteCommand selectCommand = new SqliteCommand("SELECT Text_Entry from MyTable", db);
+		//		SqliteDataReader query;
+		//		try
+		//		{
+		//			query = selectCommand.ExecuteReader();
+		//		}
+		//		catch (SqliteException error)
+		//		{
+		//			//Handle error
+		//			return entries;
+		//		}
+		//		while (query.Read())
+		//		{
+		//			entries.Add(query.GetString(0));
+		//		}
+		//		db.Close();
+		//	}
+		//	return entries;
+		//}
+	}
 }

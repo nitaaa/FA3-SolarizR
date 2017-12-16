@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -17,86 +20,63 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Solarizr
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class AppointmentManager : Page
-    {
-        //List<ProjectSite> SiteList = new List<ProjectSite>();
-        public AppointmentManager()
-        {
-            this.InitializeComponent();
-            StartTimers();
 
-            //sitelist read from db - make list
+	/// <summary>
+	/// An empty page that can be used on its own or navigated to within a Frame.
+	/// </summary>
+	public sealed partial class AppointmentManager : Page
+	{
+		ObservableCollection<Appointment> appoinments;
+		AppointmentData _ad = new AppointmentData();
+		public AppointmentManager()
+		{
+			this.InitializeComponent();
 
-            WV_Weather.Navigate(new Uri("http://forecast.io/embed/#lat=42.3583&lon=-71.0603&name=the Job Site&color=#00aaff&font=Segoe UI&units=uk"));
+			try
+			{
+				appoinments = _ad.GetUpcomingAppointments();
+				//cmb_Sites.ItemsSource = _out;
+				ListV_Upcoming.ItemsSource = appoinments;
+			}
+			catch (Exception e)
+			{
+				Debug.WriteLine(e.Message);
+			}
+		}
 
-        }
+		private void BtnApptSave_Click(object sender, RoutedEventArgs e)
+		{
+			#region Notes
+			//To convert back to offset and bind to datetimepicker   
+			//DateTime newBookingDate;
+			//newBookingDate = DateTime.SpecifyKind(apptDateTime, DateTimeKind.Utc);
+			//DateTimeOffset bindTime = newBookingDate;
+			//dateApptDatePicker.Date = bindTime;
+			#endregion
 
-        private DispatcherTimer t_DateTime;
+			
+		}
 
-        public void StartTimers()
-        {
-            t_DateTime = new DispatcherTimer();
-            t_DateTime.Tick += UpdateDateTime;
-            t_DateTime.Interval = TimeSpan.FromSeconds(1);
-            t_DateTime.Start();
+		private void AppBarHome_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(Dashboard), e);
+		}
 
-        }
+		private void AppBarProjSite_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(SiteManager), e);
+		}
 
-        public void UpdateDateTime(Object sender, Object e)
-        {
-            DateTime datetime = DateTime.Now;
+		private void AppBarAppointment_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(AppointmentManager), e);
+		}
 
-            txtCurrTime.Text = datetime.ToString("hh:mm");
-            txtCurrDate.Text = datetime.ToString("ddd, d MMM yy");
-        }
+		private void AppBarMap_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MapView), e);
+		}
 
-
-        private void BtnApptSave_Click(object sender, RoutedEventArgs e)
-        {
-            int cmbxItem = cmbxApptSitePicker.SelectedIndex;
-            //ProjectSite pSite = SiteList[cmbxItem];
-
-
-            DateTimeOffset _date = dateApptDatePicker.Date;
-            TimeSpan _time = timeApptTimePicker.Time;
-
-            DateTime apptDateTime;
-
-            apptDateTime = _date.DateTime;
-            apptDateTime.Add(_time);
-
-            #region Notes
-            //To convert back to offset and bind to datetimepicker   
-            //DateTime newBookingDate;
-            //newBookingDate = DateTime.SpecifyKind(apptDateTime, DateTimeKind.Utc);
-            //DateTimeOffset bindTime = newBookingDate;
-            //dateApptDatePicker.Date = bindTime;
-            #endregion
-
-           // Appointment newAppointment = new Appointment(apptDateTime, pSite);
-        }
-
-        private void AppBarHome_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Dashboard), e);
-        }
-
-        private void AppBarProjSite_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(SiteManager), e);
-        }
-
-        private void AppBarAppointment_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(AppointmentManager), e);
-        }
-
-        private void AppBarMap_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MapView), e);
-        }
-    }
+		
+	}
 }

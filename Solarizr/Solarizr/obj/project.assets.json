@@ -706,33 +706,6 @@
           }
         }
       },
-      "SQLite.Native/3.12.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libsqlite3.so": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/osx-x64/native/libsqlite3.dylib": {
-            "assetType": "native",
-            "rid": "osx-x64"
-          },
-          "runtimes/win7-x64/native/sqlite3.dll": {
-            "assetType": "native",
-            "rid": "win7-x64"
-          },
-          "runtimes/win7-x86/native/sqlite3.dll": {
-            "assetType": "native",
-            "rid": "win7-x86"
-          }
-        }
-      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3567,15 +3540,6 @@
           "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll": {}
         }
       },
-      "SQLite.Native/3.12.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        }
-      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -6254,15 +6218,6 @@
           "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll": {}
         }
       },
-      "SQLite.Native/3.12.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        }
-      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -8909,18 +8864,6 @@
         },
         "native": {
           "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll": {}
-        }
-      },
-      "SQLite.Native/3.12.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "native": {
-          "runtimes/win7-x64/native/sqlite3.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -11610,18 +11553,6 @@
           "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll": {}
         }
       },
-      "SQLite.Native/3.12.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "native": {
-          "runtimes/win7-x64/native/sqlite3.dll": {}
-        }
-      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -14268,18 +14199,6 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll": {}
-        }
-      },
-      "SQLite.Native/3.12.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "native": {
-          "runtimes/win7-x86/native/sqlite3.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -16967,18 +16886,6 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll": {}
-        }
-      },
-      "SQLite.Native/3.12.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "native": {
-          "runtimes/win7-x86/native/sqlite3.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -23821,21 +23728,6 @@
         "sqlite.nuspec"
       ]
     },
-    "SQLite.Native/3.12.3": {
-      "sha512": "WOaZzBIfqDE85wi6YlQgQ54KK3cWZC6BgcV/ZFPzaVPTfvqc/xnGYUkKqGTuposfPcA6KG9nN3gJNPCbJX93aQ==",
-      "type": "package",
-      "path": "sqlite.native/3.12.3",
-      "files": [
-        "build/net45/SQLite.Native.props",
-        "lib/netstandard1.0/_._",
-        "runtimes/linux-x64/native/libsqlite3.so",
-        "runtimes/osx-x64/native/libsqlite3.dylib",
-        "runtimes/win7-x64/native/sqlite3.dll",
-        "runtimes/win7-x86/native/sqlite3.dll",
-        "sqlite.native.3.12.3.nupkg.sha512",
-        "sqlite.native.nuspec"
-      ]
-    },
     "System.AppContext/4.3.0": {
       "sha512": "fKC+rmaLfeIzUhagxY17Q9siv/sPrjjKcfNg1Ic8IlQkZLipo8ljcaZQu4VtI4Jqbzjc2VTjzGLF6WmsRXAEgA==",
       "type": "package",
@@ -29055,7 +28947,6 @@
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.2",
       "Microsoft.Toolkit.Uwp.UI >= 2.1.0",
       "Microsoft.Toolkit.Uwp.UI.Controls >= 2.1.0",
-      "SQLite.Native >= 3.12.3",
       "System.Data.SQLite >= 1.0.106",
       "System.Runtime.WindowsRuntime.UI.Xaml >= 4.3.0"
     ]
@@ -29066,10 +28957,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\FA3-SolarizR\\Solarizr\\Solarizr\\Solarizr.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Solarizr\\Solarizr\\Solarizr.csproj",
       "projectName": "Solarizr",
-      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\FA3-SolarizR\\Solarizr\\Solarizr\\Solarizr.csproj",
-      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\FA3-SolarizR\\Solarizr\\Solarizr\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Solarizr\\Solarizr\\Solarizr.csproj",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Solarizr\\Solarizr\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "uap10.0.10586"
@@ -29096,10 +28987,6 @@
       "Microsoft.Toolkit.Uwp.UI.Controls": {
         "target": "Package",
         "version": "2.1.0"
-      },
-      "SQLite.Native": {
-        "target": "Package",
-        "version": "3.12.3"
       },
       "System.Data.SQLite": {
         "target": "Package",
@@ -29128,10 +29015,6 @@
           "Microsoft.Toolkit.Uwp.UI.Controls": {
             "target": "Package",
             "version": "2.1.0"
-          },
-          "SQLite.Native": {
-            "target": "Package",
-            "version": "3.12.3"
           },
           "System.Data.SQLite": {
             "target": "Package",

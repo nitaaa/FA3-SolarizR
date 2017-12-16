@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace Solarizr
 {
-    class Appointment
-    {
+	class Appointment
+	{
 		public Appointment()
 		{
 
 		}
 
-		public Appointment (DateTime date, User customer, Address address, User siteManager)
+
+		public Appointment(DateTime date, User customer, Address address, User siteManager)
 		{
-		
+
 			Date = date;
 			Status = AppointmentStatus.Pending;
 			Customer = customer;
 			Address = address;
 			SiteManager = siteManager;
-            Submitted = false;
+			Submitted = false;
 		}
 
 		public int ID { get; set; }
@@ -30,15 +31,22 @@ namespace Solarizr
 		public User Customer { get; set; }
 		public Address Address { get; set; }
 		public User SiteManager { get; set; }
-        public bool Submitted { get; set; }
+		public bool Submitted { get; set; }
 
-    }
+
+
+	}
+
+
+
 
 	public enum AppointmentStatus
 	{
 		Pending,
-        Approved,
-        Denied,
+		Approved,
+		Denied,
 		Skipped
 	}
+
+
 }

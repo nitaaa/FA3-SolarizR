@@ -15,12 +15,12 @@ namespace Solarizr
 		public Picture(string path, Appointment appointment)
 		{
 			
-			Path = path;
+			ImagePath = path;
 			Appointment = appointment;
 		}
 
 		public int ID { get; set; }
-		public string Path { get; set; }
+		public string ImagePath { get; set; }
 
 		public Appointment Appointment { get; set; }
 	}
