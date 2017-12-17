@@ -1,0 +1,84 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Solarizr"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    x:Class="Solarizr.AppointmentView"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid x:Name="ApptForm"  CornerRadius="15" Background="White" BorderBrush="#FF89E824" BorderThickness="1" HorizontalAlignment="Left" Height="652" Margin="8,58,0,0" VerticalAlignment="Top" Width="1262">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="206*"/>
+                <ColumnDefinition Width="211*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="15,12,0,0" TextWrapping="Wrap" Text="Next Appointment:" VerticalAlignment="Top" Width="191" FontSize="20" Height="29" FontFamily="Palatino Linotype"/>
+            <TextBox x:Name="NextAppt_txtblock" HorizontalAlignment="Left" Margin="222,12,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="36" Width="605" FontSize="16" IsReadOnly="True" PlaceholderText="" BorderBrush="#66747474" Grid.ColumnSpan="2" FontFamily="Palatino Linotype"/>
+            <ComboBox x:Name="cmbx_Status" HorizontalAlignment="Left" Margin="159,53,0,0" VerticalAlignment="Top" Width="242" FontSize="16" BorderBrush="#66747474" FontFamily="Palatino Linotype"/>
+            <TextBlock HorizontalAlignment="Left" Margin="16,59,0,0" TextWrapping="Wrap" Text="Status:" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.79,-0.063"/>
+            <StackPanel  x:Name="SiteInfo_SP"  HorizontalAlignment="Left" Height="69" Margin="12,102,0,0" VerticalAlignment="Top" Width="390" BorderBrush="#FF89E824" BorderThickness="1">
+                <TextBlock x:Name="txtCustomer" Text="Customer: " FontSize="16" FontFamily="Palatino Linotype"/>
+                <TextBlock x:Name="txtPhoneNr" Text="Phone: " FontSize="16" FontFamily="Palatino Linotype"/>
+                <TextBlock x:Name="txtSiteManager" Text="Site Manager: " FontSize="16" FontFamily="Palatino Linotype"/>
+            </StackPanel>
+            <TextBox x:Name="txt_Comments" HorizontalAlignment="Left" Margin="11,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="154" Width="390" FontSize="16" BorderBrush="#66747474" FontFamily="Palatino Linotype"/>
+            <TextBlock HorizontalAlignment="Left" Margin="17,177,0,0" TextWrapping="Wrap" Text="Notes and Comments:" VerticalAlignment="Top" FontSize="16" FontFamily="Palatino Linotype"/>
+            <Button x:Name="BtnReportSave" HorizontalAlignment="Center" Margin="375,319,223,0" VerticalAlignment="Top" Height="40" Width="40" Grid.Column="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/Icons/save.png"/>
+                </Button.Background>
+            </Button>
+            <Button Content="" HorizontalAlignment="Left" Margin="308,312,0,0" VerticalAlignment="Top" Height="46" Width="46" Grid.Column="1">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/send.png"/>
+                </Button.Background>
+            </Button>
+            <Button Content="" HorizontalAlignment="Left" Margin="234,317,0,0" VerticalAlignment="Top" Height="40" Width="40" Grid.Column="1">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/full-screen.png"/>
+                </Button.Background>
+            </Button>
+            <Controls:Carousel x:Name="imgCarousel" HorizontalAlignment="Left" Height="200" Margin="7,100,0,0" VerticalAlignment="Top" Width="409" AllowDrop="True" BorderBrush="#FFC7C7C7" BorderThickness="2" Grid.Column="1">
+                <Controls:Carousel.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </Controls:Carousel.EasingFunction>
+                <Controls:Carousel.ItemTemplate>
+                    <DataTemplate>
+                        <Image Width="200"
+                            Height="200"
+                            VerticalAlignment="Bottom"
+                            Source="{Binding ImagePath}"
+                            Stretch="Uniform" />
+                    </DataTemplate>
+                </Controls:Carousel.ItemTemplate>
+            </Controls:Carousel>
+            <Button x:Name="btnAddImage" Content="" HorizontalAlignment="Left" Margin="313,54,0,0" VerticalAlignment="Top" Height="40" Width="40" Grid.Column="1">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/attachment.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnTakePic" Content="" HorizontalAlignment="Left" Margin="371,55,0,0" VerticalAlignment="Top" Height="40" Width="40" RenderTransformOrigin="0.675,0.4" Grid.Column="1">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/photo-camera.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <CommandBar ClosedDisplayMode="Compact" Background="#FFAEEC6D" Margin="314,0,0,0" Height="50">
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Label="Home" Icon="Home" Click="AppBarHome_Click"/>
+            <AppBarButton Icon="People" Label="Project Sites" Click="AppBarProjSite_Click"/>
+            <AppBarButton Icon="Clock" Label="Appointment Manager" Click="AppBarAppointment_Click"/>
+            <AppBarButton Icon="World" Label="Map" Click="AppBarMap_Click"/>
+        </CommandBar>
+        <Grid HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="320" Background="#FFAEEC6D">
+            <TextBlock x:Name="txtCurrTime" HorizontalAlignment="Left" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" FontSize="24" Margin="10,10,0,0"/>
+            <TextBlock x:Name="txtCurrDate" HorizontalAlignment="Right" TextWrapping="Wrap" Text="ddd, d MMM yy" VerticalAlignment="Top" FontSize="24" Margin="0,10,61,0"/>
+        </Grid>
+
+    </Grid>
+</Page>
