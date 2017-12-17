@@ -49,7 +49,7 @@
             <TextBlock x:Name="txtTime" HorizontalAlignment="Left" Margin="59,39,0,0" TextWrapping="Wrap" Text="TI:ME" VerticalAlignment="Top" Height="45" Width="171" FontSize="36" FontFamily="Palatino Linotype" TextAlignment="Center"/>
             <Controls:RadialProgressBar x:Name="PB_Remaining" HorizontalAlignment="Left" Height="171" Margin="59,399,0,0" Value="3" VerticalAlignment="Top" Width="171" Thickness="4" Outline="LightGray" Foreground="#FF89E824" Maximum="10"/>
             <TextBlock x:Name="txt_Remaining" HorizontalAlignment="Left" Margin="127,474,0,0" TextWrapping="Wrap" Text="---%" VerticalAlignment="Top" FontFamily="Palatino Linotype" TextAlignment="Center" FontSize="20"/>
-            <!--<Border  CornerRadius="15"  BorderThickness="2" BorderBrush="#FF89E824" HorizontalAlignment="Left" Height="638" VerticalAlignment="Top" Width="279" Margin="0,0,0,-6"/>-->
+            <Border  CornerRadius="15"  BorderThickness="2" BorderBrush="#FF89E824" HorizontalAlignment="Left" Height="638" VerticalAlignment="Top" Width="279" Margin="0,0,0,-6"/>
         </Grid>
         <Grid x:Name="GridUpcoming" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280"  CornerRadius="15"  BorderThickness="2" BorderBrush="#FF89E824">
             <ListView x:Name="ListV_Upcoming" HorizontalAlignment="Left" Height="511" Margin="5,111,0,0" VerticalAlignment="Top" Width="265" FontFamily="Palatino Linotype">
@@ -74,7 +74,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Upcoming Appointments" VerticalAlignment="Top" FontSize="24" Width="270" Height="38" Margin="4,4,0,0" FontFamily="Palatino Linotype"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Upcoming Appointments" VerticalAlignment="Top" FontSize="24" Width="274" Height="38" Margin="6,6,0,0" FontFamily="Palatino Linotype"/>
             <ComboBox HorizontalAlignment="Left" Margin="111,49,0,0" VerticalAlignment="Top" Width="159" Height="40" FontFamily="Palatino Linotype"/>
             <TextBlock HorizontalAlignment="Left" Margin="15,57,0,0" TextWrapping="Wrap" Text="Filter by:" VerticalAlignment="Top" Width="80" FontSize="20" FontFamily="Palatino Linotype"/>
         </Grid>

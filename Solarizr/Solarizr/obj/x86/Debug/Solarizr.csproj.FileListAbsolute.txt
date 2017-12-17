@@ -530,9 +530,9 @@ C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\Micr
 C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\Microsoft.Xaml.Interactions.pri.xml
 C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\bin\x86\Debug\AppointmentView.xbf
-C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\AppointmentView.g.i.cs
-C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\AppointmentView.g.cs
-C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\AppointmentView.xaml
-C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\AppointmentView.xbf
 C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\Microsoft.Data.Sqlite\en-US\Microsoft.Data.Sqlite.Strings.resw
+C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\AppointmentManager.g.i.cs
+C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\AppointmentManager.g.cs
+C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\AppointmentManager.xaml
+C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\obj\x86\Debug\AppointmentManager.xbf
+C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\bin\x86\Debug\AppointmentManager.xbf

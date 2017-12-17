@@ -21,37 +21,38 @@
 
         <Grid x:ConnectionId='1' x:Name="AppBarGrid" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="1260" Grid.ColumnSpan="3">
 
-            <CommandBar Margin="316,0,-2,0" Background="Gainsboro">
+            <CommandBar Background="#FFAEEC6D" Margin="316,0,-2,0">
                 <CommandBar.Content>
                     <Grid/>
                 </CommandBar.Content>
-                <AppBarButton x:ConnectionId='17' Label="Home" Icon="Home"                         />
-                <AppBarButton x:ConnectionId='18' Icon="People" Label="Project Sites"                             />
-                <AppBarButton x:ConnectionId='19' Icon="Clock" Label="Appointment Manager"                                />
-                <AppBarButton x:ConnectionId='20' Icon="World" Label="Map"                        />
+                <AppBarButton x:ConnectionId='19' Label="Home" Icon="Home"                         />
+                <AppBarButton x:ConnectionId='20' Icon="People" Label="Project Sites"                             />
+                <AppBarButton x:ConnectionId='21' Icon="Clock" Label="Appointment Manager"                                />
+                <AppBarButton x:ConnectionId='22' Icon="World" Label="Map"                        />
             </CommandBar>
-            <Grid HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="320" Background="Gainsboro">
-                <TextBlock x:ConnectionId='15' x:Name="txtCurrTime" HorizontalAlignment="Left" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" FontSize="24" Margin="10,10,0,0"/>
-                <TextBlock x:ConnectionId='16' x:Name="txtCurrDate" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ddd, d MMM yy" VerticalAlignment="Top" FontSize="24" Margin="90,10,0,0"/>
+            <Grid HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="320" Background="#FFAEEC6D">
+                <TextBlock x:ConnectionId='17' x:Name="txtCurrTime" HorizontalAlignment="Left" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" FontSize="24" Margin="10,10,0,0"/>
+                <TextBlock x:ConnectionId='18' x:Name="txtCurrDate" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ddd, d MMM yy" VerticalAlignment="Top" FontSize="24" Margin="90,10,0,0"/>
             </Grid>
         </Grid>
         <Grid x:ConnectionId='2' x:Name="GridMiniDash" Grid.Column="2" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280">
             <Grid x:ConnectionId='12' x:Name="gridWeather" Margin="-214,89,0,287">
-                <WebView x:ConnectionId='14' x:Name="WV_Weather" HorizontalAlignment="Left" Height="241" Margin="114,9,0,0" VerticalAlignment="Top" Width="380"/>
+                <WebView x:ConnectionId='16' x:Name="WV_Weather" HorizontalAlignment="Left" Height="241" Margin="114,9,0,0" VerticalAlignment="Top" Width="380"/>
                 <Rectangle Fill="White" HorizontalAlignment="Left" Height="256" Stroke="White" VerticalAlignment="Top" Width="214"/>
                 <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Margin="214,9,0,0" Stroke="White" VerticalAlignment="Top" Width="280"/>
             </Grid>
-            <TextBlock HorizontalAlignment="Left" Margin="13,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="28" Width="251" Height="44">
+            <TextBlock HorizontalAlignment="Left" Margin="13,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="28" Width="251" Height="44" FontFamily="Palatino Linotype">
                 <Run Text=" Next Appointment:"/>
                 <LineBreak/>
                 <Run/>
             </TextBlock>
-            <TextBlock x:ConnectionId='13' x:Name="txtTime" HorizontalAlignment="Left" Margin="93,39,0,0" TextWrapping="Wrap" Text="TI:ME" VerticalAlignment="Top" Height="45" Width="91" FontSize="36"/>
-            <Controls:RadialProgressBar HorizontalAlignment="Left" Height="101" Margin="93,350,0,0" Value="0" VerticalAlignment="Top" Width="100"/>
-            <!--<Border BorderBrush="Aquamarine" BorderThickness="2" HorizontalAlignment="Left" Height="638" VerticalAlignment="Top" Width="279" Margin="0,0,0,-6"/>-->
+            <TextBlock x:ConnectionId='13' x:Name="txtTime" HorizontalAlignment="Left" Margin="59,39,0,0" TextWrapping="Wrap" Text="TI:ME" VerticalAlignment="Top" Height="45" Width="171" FontSize="36" FontFamily="Palatino Linotype" TextAlignment="Center"/>
+            <Controls:RadialProgressBar x:ConnectionId='14' x:Name="PB_Remaining" HorizontalAlignment="Left" Height="171" Margin="59,399,0,0" Value="3" VerticalAlignment="Top" Width="171" Thickness="4" Outline="LightGray" Foreground="#FF89E824" Maximum="10"/>
+            <TextBlock x:ConnectionId='15' x:Name="txt_Remaining" HorizontalAlignment="Left" Margin="127,474,0,0" TextWrapping="Wrap" Text="---%" VerticalAlignment="Top" FontFamily="Palatino Linotype" TextAlignment="Center" FontSize="20"/>
+            <Border  CornerRadius="15"  BorderThickness="2" BorderBrush="#FF89E824" HorizontalAlignment="Left" Height="638" VerticalAlignment="Top" Width="279" Margin="0,0,0,-6"/>
         </Grid>
-        <Grid x:ConnectionId='3' x:Name="GridUpcoming" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" BorderThickness="2" BorderBrush="Aquamarine">
-            <ListView x:ConnectionId='11' x:Name="ListV_Upcoming" HorizontalAlignment="Left" Height="511" Margin="5,111,0,0" VerticalAlignment="Top" Width="265">
+        <Grid x:ConnectionId='3' x:Name="GridUpcoming" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280"  CornerRadius="15"  BorderThickness="2" BorderBrush="#FF89E824">
+            <ListView x:ConnectionId='11' x:Name="ListV_Upcoming" HorizontalAlignment="Left" Height="511" Margin="5,111,0,0" VerticalAlignment="Top" Width="265" FontFamily="Palatino Linotype">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -73,9 +74,9 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Upcoming Appointments" VerticalAlignment="Top" FontSize="24" Width="270" Height="38" Margin="4,4,0,0"/>
-            <ComboBox HorizontalAlignment="Left" Margin="111,49,0,0" VerticalAlignment="Top" Width="159" Height="40"/>
-            <TextBlock HorizontalAlignment="Left" Margin="15,57,0,0" TextWrapping="Wrap" Text="Filter by:" VerticalAlignment="Top" Width="80" FontSize="20"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Upcoming Appointments" VerticalAlignment="Top" FontSize="24" Width="274" Height="38" Margin="6,6,0,0" FontFamily="Palatino Linotype"/>
+            <ComboBox HorizontalAlignment="Left" Margin="111,49,0,0" VerticalAlignment="Top" Width="159" Height="40" FontFamily="Palatino Linotype"/>
+            <TextBlock HorizontalAlignment="Left" Margin="15,57,0,0" TextWrapping="Wrap" Text="Filter by:" VerticalAlignment="Top" Width="80" FontSize="20" FontFamily="Palatino Linotype"/>
         </Grid>
         <Grid x:ConnectionId='4' x:Name="GridMain" Grid.Column="1" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="660">
             <Grid x:ConnectionId='5' x:Name="ApptCreateGrid" HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="640" Margin="10,68,0,0">
@@ -84,15 +85,15 @@
                         <ImageBrush Stretch="Uniform" ImageSource="Assets/Save1.jpg"/>
                     </Button.Background>
                 </Button>
-                <ComboBox x:ConnectionId='8' x:Name="cmbxApptSitePicker" HorizontalAlignment="Left" Margin="311,10,0,0" VerticalAlignment="Top" Width="321"/>
-                <TimePicker x:ConnectionId='9' x:Name="timeApptTimePicker" HorizontalAlignment="Left" Margin="311,84,0,0" VerticalAlignment="Top" Width="319"/>
-                <DatePicker x:ConnectionId='10' x:Name="dateApptDatePicker" HorizontalAlignment="Left" Margin="311,47,0,0" VerticalAlignment="Top" Width="319"/>
-                <TextBlock HorizontalAlignment="Left" Margin="40,7,0,0" TextWrapping="Wrap" Text="Project Site:" VerticalAlignment="Top" FontSize="22"/>
-                <TextBlock HorizontalAlignment="Left" Margin="40,50,0,0" TextWrapping="Wrap" Text="Date:" VerticalAlignment="Top" FontSize="22"/>
-                <TextBlock HorizontalAlignment="Left" Margin="40,87,0,0" TextWrapping="Wrap" Text="Time:" VerticalAlignment="Top" FontSize="22"/>
+                <ComboBox x:ConnectionId='8' x:Name="cmbxApptSitePicker" HorizontalAlignment="Left" Margin="311,10,0,0" VerticalAlignment="Top" Width="321" FontFamily="Palatino Linotype"/>
+                <TimePicker x:ConnectionId='9' x:Name="timeApptTimePicker" HorizontalAlignment="Left" Margin="311,84,0,0" VerticalAlignment="Top" Width="319" FontFamily="Palatino Linotype"/>
+                <DatePicker x:ConnectionId='10' x:Name="dateApptDatePicker" HorizontalAlignment="Left" Margin="311,47,0,0" VerticalAlignment="Top" Width="319" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="40,7,0,0" TextWrapping="Wrap" Text="Project Site:" VerticalAlignment="Top" FontSize="22" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="40,50,0,0" TextWrapping="Wrap" Text="Date:" VerticalAlignment="Top" FontSize="22" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="40,87,0,0" TextWrapping="Wrap" Text="Time:" VerticalAlignment="Top" FontSize="22" FontFamily="Palatino Linotype"/>
             </Grid>
-            <TextBlock HorizontalAlignment="Left" Margin="182,10,0,0" TextWrapping="Wrap" Text="New Appointment" VerticalAlignment="Top" Width="320" Height="53" FontSize="36" TextAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Left" Margin="84,265,0,0" TextWrapping="Wrap" Text="Unsubmitted Reports" VerticalAlignment="Top" Width="526" Height="53" FontSize="36" TextAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" Margin="182,10,0,0" TextWrapping="Wrap" Text="New Appointment" VerticalAlignment="Top" Width="320" Height="53" FontSize="36" TextAlignment="Center" FontFamily="Palatino Linotype"/>
+            <TextBlock HorizontalAlignment="Left" Margin="84,265,0,0" TextWrapping="Wrap" Text="Unsubmitted Reports" VerticalAlignment="Top" Width="526" Height="53" FontSize="36" TextAlignment="Center" FontFamily="Palatino Linotype"/>
             <ListView x:ConnectionId='6' x:Name="Unsubmitted_ListV" HorizontalAlignment="Left" Height="299" Margin="10,323,0,0" VerticalAlignment="Top" Width="640">
                 <ListView.ItemTemplate>
                     <DataTemplate>

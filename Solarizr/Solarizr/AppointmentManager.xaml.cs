@@ -29,7 +29,7 @@ namespace Solarizr
     {
         //appointments - lists and data context
         ObservableCollection<Appointment> todaysAppointments;
-        ObservableCollection<Appointment> todayUpcoming;
+        ObservableCollection<Appointment> todayUpcoming = new ObservableCollection<Appointment>();
         ObservableCollection<Appointment> upcomingAppointments;
         AppointmentData appointmentData = new AppointmentData();
 
@@ -54,7 +54,7 @@ namespace Solarizr
                 }
             }
             //order the appointments by date/time.
-            var tempList = upcomingAppointments.OrderBy(a => a.Date);
+            var tempList = todayUpcoming.OrderBy(a => a.Date);
 
             tempList.ToList().ForEach(q =>
             {
@@ -76,6 +76,62 @@ namespace Solarizr
 
             //Minidash Methods
             GetWeather();
+
+            StartTimers();
+        }
+
+        private DispatcherTimer DT_DateTime;
+
+        public void StartTimers()
+        {
+            DT_DateTime = new DispatcherTimer();
+            DT_DateTime.Tick += UpdateDateTime;
+            DT_DateTime.Interval = TimeSpan.FromSeconds(1);
+            DT_DateTime.Start();
+
+        }
+
+        public void UpdateDateTime(Object sender, Object e)
+        {
+            DateTime Today = DateTime.Now;
+
+            txtCurrTime.Text = Today.ToString("hh:mm");
+            txtCurrDate.Text = Today.ToString("dddd, d MMMM yyyy");
+            try
+            {
+                Appointment currentAppointment = upcomingAppointments[0];
+                if (currentAppointment.Date > DateTime.Now)
+                {
+                    TimeSpan timeUntil = currentAppointment.Date - Today;
+                    if ((timeUntil.TotalHours <= 24) && (timeUntil.TotalSeconds > 0))
+                    {
+                        if(timeUntil.Minutes < 10)
+                        {
+                            //formatting
+                            txtTime.Text = timeUntil.Hours.ToString() + ":0" + timeUntil.Minutes.ToString();
+                        }
+                        else
+                        {
+                            txtTime.Text = timeUntil.Hours.ToString() + ":" + timeUntil.Minutes.ToString();
+                        }
+                    }
+                    else if (timeUntil.TotalDays > 0)
+                    {
+                        txtTime.Text = timeUntil.TotalDays.ToString();
+                    }
+                    else
+                    {
+                        txtTime.Text = "Error";
+                    }
+                }
+            }
+            catch (Exception execption)
+            {
+                txtTime.Text = "No Appts";
+                Debug.WriteLine(execption.ToString());
+                throw;
+            }
+
         }
 
         private void GetDashAppt()
@@ -84,24 +140,12 @@ namespace Solarizr
 
             if (nrAppts > 0)
             {
-                PB_Appointments.Value = nrComplete;
-                PB_Appointments.Maximum = nrAppts;
-                txt_Percent.Text = (Math.Round(nrComplete / nrAppts * 100)).ToString() + "%";
+                PB_Remaining.Value = nrComplete;
+                PB_Remaining.Maximum = nrAppts;
+                txt_Remaining.Text = (Math.Round(nrComplete / nrAppts * 100)).ToString() + "%";
             }
         }
 
-        private void BtnApptSave_Click(object sender, RoutedEventArgs e)
-        {
-            #region Notes
-            //To convert back to offset and bind to datetimepicker   
-            //DateTime newBookingDate;
-            //newBookingDate = DateTime.SpecifyKind(apptDateTime, DateTimeKind.Utc);
-            //DateTimeOffset bindTime = newBookingDate;
-            //dateApptDatePicker.Date = bindTime;
-            #endregion
-
-
-        }
 
         private async void GetWeather()
         {
@@ -109,6 +153,12 @@ namespace Solarizr
             geoLocator.DesiredAccuracy = PositionAccuracy.High;
             Geoposition pos = await geoLocator.GetGeopositionAsync();
             WV_Weather.Navigate(new Uri("http://forecast.io/embed/#lat=" + pos.Coordinate.Point.Position.Latitude.ToString() + "&lon=" + pos.Coordinate.Point.Position.Longitude.ToString() + "&name=your location&color=#5fa812&font=Segoe UI&units=ca"));
+
+        }
+
+
+        private void BtnApptSave_Click(object sender, RoutedEventArgs e)
+        {
 
         }
 

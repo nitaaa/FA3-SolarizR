@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-16T11:17:53.424</Modified>
+      <Modified>2017-12-17T13:27:46.909</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\bin\x86\Debug\Solarizr.exe">
       <PackagePath>entrypoint\Solarizr.exe</PackagePath>
-      <Modified>2017-12-16T11:17:51.167</Modified>
+      <Modified>2017-12-17T13:27:45.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\Microsoft.CSharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -846,7 +846,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\bin\x86\Debug\Solarizr.xr.xml">
       <PackagePath>Solarizr.xr.xml</PackagePath>
-      <Modified>2017-12-16T11:17:50.850</Modified>
+      <Modified>2017-12-17T13:25:26.693</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1003,11 +1003,11 @@
     <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-16T11:17:51.775</Modified>
+      <Modified>2017-12-17T13:25:29.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\Documents\GitHub\FA3-SolarizR\Solarizr\Solarizr\bin\x86\Debug\Core\Solarizr.exe">
       <PackagePath>Solarizr.exe</PackagePath>
-      <Modified>2017-12-16T11:17:53.417</Modified>
+      <Modified>2017-12-17T13:27:46.885</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

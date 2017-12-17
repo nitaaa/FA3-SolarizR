@@ -40,9 +40,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="CornerRadius" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
-      <RootProperty Name="CornerRadius" />
       <RootProperty Name="Padding" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
@@ -70,9 +70,9 @@
       <RootProperty Name="Height" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="TextAlignment" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Inlines" />
-      <RootProperty Name="FontFamily" />
       <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
@@ -82,6 +82,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -116,9 +117,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="Height" />
       <RootProperty Name="BorderBrush" />
-      <RootProperty Name="FontFamily" />
       <RootProperty Name="Items" />
       <RootProperty Name="FontSize" />
     </RootType>
@@ -127,8 +128,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="ClockIdentifier" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="ClockIdentifier" />
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
@@ -153,8 +154,18 @@
       <RootProperty Name="Thickness" />
       <RootProperty Name="Outline" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="Minimum" />
       <RootProperty Name="Maximum" />
+      <RootProperty Name="Minimum" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
@@ -177,11 +188,13 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
-      <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
       <RootProperty Name="PrimaryCommands" />
       <RootProperty Name="Height" />
+      <RootProperty Name="VerticalContentAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ClosedDisplayMode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
@@ -207,6 +220,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="SelectedBorderBrush" />
+      <RootProperty Name="TodayForeground" />
       <RootProperty Name="SelectedPressedBorderBrush" />
       <RootProperty Name="SelectedHoverBorderBrush" />
     </RootType>
