@@ -34,8 +34,8 @@
             </Grid>
         </Grid>
         <Grid x:Name="GridMiniDash" CornerRadius="15" Grid.Column="2" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" BorderThickness="2" BorderBrush="#FF89E824"/>
-        <Grid x:Name="GridSites" CornerRadius="15" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" BorderThickness="2" BorderBrush="#FF89E824">
-            <ListView x:Name="ListV_Upcoming" Height="511" Margin="5,111,0,0" Width="265">
+        <Grid x:Name="GridSites" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280"  CornerRadius="15"  BorderThickness="2" BorderBrush="#FF89E824">
+            <ListView x:Name="ListV_Upcoming" Height="511" Margin="5,111,0,0" Width="265" FontFamily="Palatino Linotype">
                 <ListView.ItemTemplate>
                     <DataTemplate >
                         <Grid HorizontalAlignment="Stretch" CornerRadius="10" Padding="5" Background="#72A3E4E4" Margin="0,0,0,14" Width="250">
@@ -57,9 +57,9 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Project Sites" VerticalAlignment="Top" FontSize="24" Width="270" Height="38" Margin="4,4,0,0" TextAlignment="Center"/>
-            <ComboBox x:Name="cmb_Sites" HorizontalAlignment="Left" Margin="111,49,0,0" VerticalAlignment="Top" Width="159" Height="40"/>
-            <TextBlock HorizontalAlignment="Left" Margin="15,57,0,0" TextWrapping="Wrap" Text="Filter by:" VerticalAlignment="Top" Width="80" FontSize="20"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Project Sites" VerticalAlignment="Top" FontSize="24" Width="270" Height="38" Margin="4,4,0,0" TextAlignment="Center" FontFamily="Palatino Linotype"/>
+            <ComboBox x:Name="cmb_Sites" HorizontalAlignment="Left" Margin="111,49,0,0" VerticalAlignment="Top" Width="159" Height="40" FontFamily="Palatino Linotype"/>
+            <TextBlock HorizontalAlignment="Left" Margin="15,57,0,0" TextWrapping="Wrap" Text="Filter by:" VerticalAlignment="Top" Width="80" FontSize="20" FontFamily="Palatino Linotype"/>
         </Grid>
         <Grid x:Name="GridMain" Grid.Column="1" HorizontalAlignment="Left" Height="632" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="660">
             <Grid x:Name="ApptCreateGrid" HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="640" Margin="10,63,0,0">
@@ -88,12 +88,12 @@
                 <TextBlock HorizontalAlignment="Left" Margin="63,299,0,0" TextWrapping="Wrap" Text="Postal Code" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
                 <TextBlock HorizontalAlignment="Left" Margin="63,340,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
                 <TextBlock HorizontalAlignment="Left" Margin="63,13,0,0" TextWrapping="Wrap" Text="Customer Name" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
-                <TextBlock HorizontalAlignment="Left" Margin="63,95,0,0" TextWrapping="Wrap" Text="Site Manager" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
-                <TextBlock HorizontalAlignment="Left" Margin="63,60,0,0" TextWrapping="Wrap" Text="Telephone Number" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,92,0,0" TextWrapping="Wrap" Text="Site Manager" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
+                <TextBlock HorizontalAlignment="Left" Margin="63,51,0,0" TextWrapping="Wrap" Text="Telephone Number" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
                 <TextBlock HorizontalAlignment="Left" Margin="63,426,0,0" TextWrapping="Wrap" Text="Date" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
                 <TextBlock HorizontalAlignment="Left" Margin="63,467,0,0" TextWrapping="Wrap" Text="Time" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.519,0.034" FontFamily="Palatino Linotype"/>
             </Grid>
-            <TextBlock HorizontalAlignment="Left" Margin="182,10,0,0" TextWrapping="Wrap" Text="New Project Site" VerticalAlignment="Top" Width="320" Height="53" FontSize="36" TextAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" Margin="182,10,0,0" TextWrapping="Wrap" Text="New Project Site" VerticalAlignment="Top" Width="320" Height="53" FontSize="36" TextAlignment="Center" FontFamily="Palatino Linotype"/>
         </Grid>
 
     </Grid>

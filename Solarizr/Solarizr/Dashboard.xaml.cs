@@ -248,7 +248,7 @@ namespace Solarizr
 
 		private async void Mapsample_Loaded(object sender, RoutedEventArgs e)
 		{
-			 geoLocator = new Geolocator();
+			geoLocator = new Geolocator();
 			geoLocator.DesiredAccuracy = PositionAccuracy.High;
 			Geoposition pos = await geoLocator.GetGeopositionAsync();
 			WebView_Weather.Navigate(new Uri("http://forecast.io/embed/#lat=" + pos.Coordinate.Point.Position.Latitude.ToString() +"&lon="+pos.Coordinate.Point.Position.Longitude.ToString()+ "&name=your location&color=#5fa812&font=Segoe UI&units=ca"));
